@@ -96,6 +96,13 @@
 
     <dependencies>
         <dependency>
+            <groupId>pl.islandworld</groupId>
+            <artifactId>IslandWorld</artifactId>
+            <version>LATEST</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/IslandWorld.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.20.2-R0.1-SNAPSHOT</version>
