@@ -4,6 +4,7 @@ import com.artillexstudios.axapi.utils.StringUtils;
 import com.artillexstudios.axsellwands.hooks.container.ContainerHook;
 import com.artillexstudios.axsellwands.hooks.currency.CurrencyHook;
 import com.artillexstudios.axsellwands.hooks.currency.VaultHook;
+import com.artillexstudios.axsellwands.hooks.protection.IslandWorldHook;
 import com.artillexstudios.axsellwands.hooks.protection.ProtectionHook;
 import com.artillexstudios.axsellwands.hooks.protection.WorldGuardHook;
 import com.artillexstudios.axsellwands.hooks.shop.BuiltinPrices;
@@ -33,6 +34,12 @@ public class HookManager {
         if (HOOKS.getBoolean("hook-settings.WorldGuard.register", true) && Bukkit.getPluginManager().getPlugin("WorldGuard") != null) {
             PROTECTION_HOOKS.add(new WorldGuardHook());
             Bukkit.getConsoleSender().sendMessage(StringUtils.formatToString("&#33FF33[AxSellwands] Hooked into WorldGuard!"));
+        }
+
+        // Dodana rejestracja IslandWorld
+        if (Bukkit.getPluginManager().getPlugin("IslandWorld") != null) {
+            PROTECTION_HOOKS.add(new IslandWorldHook());
+            Bukkit.getConsoleSender().sendMessage(StringUtils.formatToString("&#33FF33[AxSellwands] Hooked into IslandWorld!"));
         }
     }
 
