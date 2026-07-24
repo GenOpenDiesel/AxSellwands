@@ -1,12 +1,19 @@
 # DOCUMENTATION: https://docs.artillex-studios.com/axsellwands.html
 
+# what plugins should be used?
 hooks:
+  # list of supported plugins: https://docs.artillex-studios.com/integrations.html#currency
+  # if you pick a plugin that supports multiple currencies, make sure to select the currency under the hook-settings below!
   economy-plugin: "Vault"
-  price-plugin: "EconomyShopGUI"
+  # list of supported plugins: https://docs.artillex-studios.com/integrations.html#shop
+  # you can set it to "builtin" for the plugin to use the prices.yml
+  price-plugin: "builtin"
+  # https://docs.artillex-studios.com/integrations.html#protection
+  protection-plugins:
+    # Custom integration dodana w tym forku (pl.islandworld). Ustaw false, aby wyłączyć.
+    IslandWorld: true
 
 hook-settings:
-  WorldGuard:
-    register: true
 
 # do not change this
-version: 2
+version: 4
