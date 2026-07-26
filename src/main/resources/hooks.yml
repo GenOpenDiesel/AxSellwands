@@ -7,7 +7,8 @@ hooks:
   economy-plugin: "Vault"
   # list of supported plugins: https://docs.artillex-studios.com/integrations.html#shop
   # you can set it to "builtin" for the plugin to use the prices.yml
-  price-plugin: "builtin"
+  # UWAGA: nazwa jest case-sensitive i musi dokladnie odpowiadac nazwie integracji ("EconomyShopGUI", nie "ECONOMYSHOPGUI")
+  price-plugin: "EconomyShopGUI"
   # https://docs.artillex-studios.com/integrations.html#protection
   protection-plugins:
     # Custom integration dodana w tym forku (pl.islandworld). Ustaw false, aby wyłączyć.
