@@ -7,8 +7,11 @@ hooks:
   economy-plugin: "Vault"
   # list of supported plugins: https://docs.artillex-studios.com/integrations.html#shop
   # you can set it to "builtin" for the plugin to use the prices.yml
-  # UWAGA: nazwa jest case-sensitive i musi dokladnie odpowiadac nazwie integracji ("EconomyShopGUI", nie "ECONOMYSHOPGUI")
-  price-plugin: "EconomyShopGUI"
+  # UWAGA: nazwa jest case-sensitive i musi dokladnie odpowiadac nazwie integracji.
+  # "EconomyShopGUIDirect" = custom integracja tego forka liczaca BAZOWA cene sprzedazy
+  # (naprawia falszywe "nothing-sold" przy limitach/cenach dynamicznych ESG).
+  # Wbudowana "EconomyShopGUI" uzywa transakcyjnej ceny (moze zwracac 0/null).
+  price-plugin: "EconomyShopGUIDirect"
   # https://docs.artillex-studios.com/integrations.html#protection
   protection-plugins:
     # Custom integration dodana w tym forku (pl.islandworld). Ustaw false, aby wyłączyć.

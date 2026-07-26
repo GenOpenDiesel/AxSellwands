@@ -30,6 +30,11 @@ public class HookManager {
                     // Custom integration: IslandWorld (pl.islandworld). Aktywuje się gdy plugin jest obecny
                     // oraz gdy hooks.protection-plugins.IslandWorld != false (domyślnie true).
                     AxIntegrationsAPI.provideIntegration(IslandWorldProtection.class);
+                    // Custom shop: EconomyShopGUI liczacy BAZOWA cene sprzedazy (getItemSellPrice),
+                    // zamiast transakcyjnego getSellPrice(OfflinePlayer,...) z wbudowanej integracji,
+                    // ktore zwracalo null (limity/ceny dynamiczne) -> falszywe "nothing-sold".
+                    // Aktywne gdy hooks.price-plugin: EconomyShopGUIDirect
+                    AxIntegrationsAPI.provideIntegration(EconomyShopGuiPrices.class);
 
                     boolean modified = false;
                     for (String name : IntegrationManager.listAvailableIntegrations(IntegrationType.PROTECTION).keySet()) {

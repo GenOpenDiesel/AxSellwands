@@ -112,6 +112,13 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/IslandWorld.jar</systemPath>
         </dependency>
+        <!-- EconomyShopGUI API dla custom shop integration (EconomyShopGuiPrices) -->
+        <dependency>
+            <groupId>com.github.Gypopo</groupId>
+            <artifactId>EconomyShopGUI-API</artifactId>
+            <version>1.7.1</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.artillexstudios.axapi</groupId>
             <artifactId>axapi</artifactId>
