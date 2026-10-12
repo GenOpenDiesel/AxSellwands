@@ -1,4 +1,5 @@
 name: AxSellwands
+author: genallthebest
 version: '${project.version}'
 main: com.artillexstudios.axsellwands.AxSellwands
 api-version: '1.20'
